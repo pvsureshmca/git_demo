@@ -1,0 +1,93 @@
+In first time 
+
+1) root@innoppladmin-300E4C-300E5C-300E7C:/# ls ~/.ssh
+
+2) root@innoppladmin-300E4C-300E5C-300E7C:/#ssh-keygen
+
+3) root@innoppladmin-300E4C-300E5C-300E7C:/# gedit ~/.ssh/id_rsa.pub 
+
+4) copy and past into https://innoppl.codebasehq.com/settings/profile add new ssh public kay
+
+5) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html# mkdir my.qiigo.com
+
+6) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html# cd my.qiigo.com/
+
+7) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git init 
+Initialized empty Git repository in /var/www/html/my.qiigo.com/.git/
+
+8) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git remote add origin git@codebasehq.com:innoppl/qiigo/live.git
+
+9) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git remote -v
+origin	git@codebasehq.com:innoppl/qiigo/live.git (fetch)
+origin	git@codebasehq.com:innoppl/qiigo/live.git (push)
+
+10) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git checkout -b development
+Switched to a new branch 'development'
+
+11) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git pull origin development
+remote: Counting objects: 6915, done.
+remote: Compressing objects: 100% (4559/4559), done.
+remote: Total 6915 (delta 2185), reused 6915 (delta 2185)
+Receiving objects: 100% (6915/6915), 789.22 MiB | 800.00 KiB/s, done.
+Resolving deltas: 100% (2185/2185), done.
+From codebasehq.com:innoppl/qiigo/live
+ * branch            development -> FETCH_HEAD
+ * [new branch]      development -> origin/development
+
+12) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git branch -v
+* development 7a4b42e initial commit
+
+13) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git checkout -b login
+Switched to a new branch 'login'
+
+14) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git add .
+
+15) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git status
+
+16) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git commit -m "index.php file edited and added command line"
+
+
+17) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git status
+On branch login
+nothing to commit, working directory clean
+
+18) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git checkout development
+Checking out files: 100% (792/792), done.
+Switched to branch 'development'
+
+19) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git branch -v
+* development 7a4b42e initial commit
+  login       00919ac index.php file edited and added command line
+
+20) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git merge login
+
+
+21) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com## git pull origin development
+remote: Counting objects: 9, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 9 (delta 5), reused 9 (delta 5), pack-reused 0
+Unpacking objects: 100% (9/9), done.
+From https://github.com/surendarm/caprep
+ * branch            development -> FETCH_HEAD
+   d4eab5e..f39fe16  development -> origin/development
+Merge made by the 'recursive' strategy.
+ tempform/InventoryItem.java | 6 +++---
+ tempform/login.php          | 5 +++++
+ 2 files changed, 8 insertions(+), 3 deletions(-)
+ create mode 100644 tempform/login.php
+ 
+22) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git diff HEAD
+23) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git push origin development
+
+24) root@innoppladmin-300E4C-300E5C-300E7C:/var/www/html/my.qiigo.com# git branch -d login 
+Deleted branch login (was 00919ac).
+
+
+
+
+
+
+
+
+
+
